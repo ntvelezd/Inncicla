@@ -11,6 +11,9 @@ def post_list(request):
 def home(request):
     return render(request,"InnciclaApp/home.html")
 
+def estaciones(request):
+    return render(request,"InnciclaApp/estaciones.html")
+
 class SignUp(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy("login")
