@@ -1,78 +1,178 @@
 {% extends 'InnciclaApp/base.html' %}
-
+{% load static %}
 {% block content %}
-<div class="container">
-
-    <div class="row text-center">
-<div class = "container-fluid text-center">
-        <div class="card " style="width: 12rem;">
-
-            <img src="{% static 'static_InnciclaApp/images/MariaLuisa.png' %}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container">
+        <h1 class="color">Estaciones</h1>
+        <br />
+        <br />
+        <div class="row">
+            <div class = "container-fluid">
+                <div class="card bg-warning mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-4">
+                            <img src="{% static 'css/images/floresta.png' %}"
+                                 class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Floresta</h5>
+                                <p class="card-text">
+                                    Cl. 48 ## 79-46, Medellín, Antioquía<br/>
+                                    Telefono: 0343222259
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Floresta/@6.2586333,-75.59956,17z/data=!3m1!4b1!4m5!3m4!1s0x8e44290d48d97a55:0xb0bae8d34dff6701!8m2!3d6.258628!4d-75.597366" class="btn btn-primary">Ir a maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class = "container-fluid">
+                <div class="card bg-warning mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-4">
+                            <img src="{% static 'css/images/maria.png' %}"
+                                 class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Maria Mulata</h5>
+                                <p class="card-text">
+                                    Cl 44A ## 75-34, Medellín, Antioquía <br/>
+                                    Teléfono: 0343222259
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Mar%C3%ADa+Mulata/@6.2505543,-75.596913,17z/data=!3m1!4b1!4m5!3m4!1s0x8e44290af509d901:0xf9d7117ee5fe71b8!8m2!3d6.250549!4d-75.594719" class="btn btn-primary">Ir a maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class = "container-fluid">
+                <div class="card bg-warning mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-4">
+                            <img src="{% static 'css/images/bulerias.png' %}"
+                                 class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bulerias</h5>
+                                <p class="card-text">
+                                    Dg. 74b #32ee-102 a, Cl. 32EE #188, Medellín, Antioquia<br/>
+                                    Teléfono: 0343222259
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                                <a href="https://www.google.com.co/maps/place/EnCicla+Buler%C3%ADas/@6.2384787,-75.5926943,17z/data=!3m1!4b1!4m5!3m4!1s0x8e4429f6744ea7df:0xa9341cbac720c973!8m2!3d6.2384734!4d-75.5905003" class="btn btn-primary">ir a maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class = "container-fluid">
+                <div class="card bg-warning mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-4">
+                            <img src="{% static 'css/images/estadio.png' %}"
+                                 class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Estadio</h5>
+                                <p class="card-text">
+                                    Cl. 47D ## 70-82, Medellín, Antioquía<br/>
+                                    Teléfono: 0343222259
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Estadio/@6.2523343,-75.5970887,15z/data=!4m9!1m2!2m1!1sencicla+estadio!3m5!1s0x8e442908d0cec501:0x8a9444783f277b2c!8m2!3d6.2535325!4d-75.588212!15sCg9lbmNpY2xhIGVzdGFkaW-SARhiaWN5Y2xlX3NoYXJpbmdfbG9jYXRpb24" class="btn btn-primary">Ir a maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class = "container-fluid">
+                <div class="card bg-warning sm-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-4">
+                            <img src="{% static 'css/images/bello.png' %}"
+                                 class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bello</h5>
+                                <p class="card-text">
+                                    Cra. 50 #5a0-1, Bello, Antioquia <br>
+                                    Se encuentra en el parque principal de bello
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Parque+Bello/@6.3346353,-75.5672708,15z/data=!4m9!1m2!2m1!1sencicla+bello!3m5!1s0x8e442f3b84b6c073:0x1d1fa901cd4132a!8m2!3d6.3346353!4d-75.5585161!15sCg1lbmNpY2xhIGJlbGxvkgEWYmljeWNsZV9yZW50YWxfc2VydmljZQ" class="btn btn-primary">Ir a maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class = "container-fluid">
+                <div class="card bg-warning mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-4">
+                            <img src="{% static 'css/images/robledo.png' %}"
+                                 class="img-fluid rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Robledo</h5>
+                                <p class="card-text">
+                                    Cra. 77B ## 60-22, Medellín, Antioquía<br>
+                                    Teléfono: 0343222259
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Robledo/@6.2731701,-75.5943878,17z/data=!3m1!4b1!4m5!3m4!1s0x8e44293dd16719ab:0x2e9d5610883144e6!8m2!3d6.2731648!4d-75.5921938" class="btn btn-primary">Ir a maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="{% url 'inicio' %}" class="btn btn-success">Inicio</a>
             </div>
         </div>
     </div>
-</div>
-    <div class="row text-center">
-        <div class="card text-center" style="width: 12rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="card text-center" style="width: 12rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    <br> <br>
-
-    <div class="row text-center">
-        <div class="card text-center" style="width: 12rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="card text-center" style="width: 12rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-    <div class="row text-center">
-        <div class="card text-center" style="width: 12rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
-</div>
+    <br />
+    <br />
 {% endblock %}

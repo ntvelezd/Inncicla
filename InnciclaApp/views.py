@@ -6,8 +6,8 @@ from django.views.generic.edit import CreateView
 from InnciclaApp.forms import SignUpForm
 
 # Create your views here.
-def post_list(request):
-    return render(request, 'InnciclaApp/primerTemplate.html', {})
+def inicio(request):
+    return render(request, 'InnciclaApp/inicio.html', {})
 
 def home(request):
     return render(request,"InnciclaApp/home.html")

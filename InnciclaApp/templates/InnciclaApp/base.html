@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Preahvihear&display=swap"
         rel="stylesheet">
-    (% load static %)
+    
     <style>
         .navbar-custom {
             background-color: #1085F1;
@@ -25,10 +25,11 @@
             font-size: 150%;
         }
     </style>
-
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/primerTemplate.css' %}">
 </head>
 
-<body>
+<body style="background-color:#1084f1;">
     <div class="page-header">
         <nav class="navbar navbar-custom">
             <div class="container-fluid">
@@ -42,7 +43,6 @@
             </div>
         </nav>
     </div>
-    <br> <br>
 
     {% block content %}
     {% endblock %}
