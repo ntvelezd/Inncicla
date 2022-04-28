@@ -1,0 +1,94 @@
+.h1{
+    color: #f8f8f8;
+  
+}
+.color{
+    color:white;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 70px;
+    font-family: 'Preahvihear', sans-serif;
+}
+
+.color2{
+    color:white;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 70px;
+    font-family: 'Preahvihear', sans-serif;
+}
+
+.box{
+    border: 1px solid ;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+    
+}
+
+.box2{
+    border: 1px solid ;
+    padding: 30px;
+    text-align: center;
+    margin: 8px;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 50px;;
+}
+
+.llamada{
+    border: 1px solid ;
+    padding: 30px;
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+    color: white;
+    border-radius: 40px;
+    margin-bottom: 50px;;
+}
+
+#casa{
+    background-color: orange;
+    border: orange;
+}
+
+#estaciones{
+    background-color: rgb(85, 207, 69);
+    border: rgb(85, 207, 69);
+}
+
+#contacto{
+    background-color: rgb(214, 103, 214);
+    border: rgb(214, 103, 214);
+}
+
+#mapa{
+    background-color: rgb(209, 209, 0);
+    border: yellow;
+}
+
+#llamada{
+    background-color: red;
+    border: red;
+}
+
+.profile{
+    position: absolute;
+    border-radius: 200px;
+    width: 110px;
+    padding: 20px;
+    
+}
+
+.icon{
+    font-size:1.5em; 
+}
+
+
+
+;
