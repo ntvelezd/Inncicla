@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'InnciclaApp',
-    "bootstrap5",
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -101,6 +103,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# users will be redirected to the home page after login
+LOGIN_REDIRECT_URL = 'estaciones'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
