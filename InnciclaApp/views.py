@@ -31,3 +31,7 @@ def estaciones(request):
 
 def contactos(request):
     return render(request,"InnciclaApp/Contactos/contactos.html")
+    
+def mapa(request):
+    return render(request,"InnciclaApp/mapa.html")
+
