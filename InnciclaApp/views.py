@@ -28,3 +28,6 @@ def signup(request):
 
 def estaciones(request):
     return render(request,"InnciclaApp/estaciones.html")
+
+def contactos(request):
+    return render(request,"InnciclaApp/Contactos/contactos.html")
