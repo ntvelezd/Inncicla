@@ -42,3 +42,10 @@ def busqueda(request):
        "estaciones" : estaciones,
    }
    return render(request, 'InnciclaApp/estaciones.html', context)
+
+def contactos(request):
+    return render(request,"InnciclaApp/Contactos/contactos.html")
+    
+def mapa(request):
+    return render(request,"InnciclaApp/mapa.html")
+
