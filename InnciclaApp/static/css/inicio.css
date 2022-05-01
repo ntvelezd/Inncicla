@@ -1,7 +1,22 @@
+#map {
+    height: 700px;
+    width: 95%;
+    overflow: hidden;
+    border: thin solid #333;
+    padding: 20px;
+    margin: 20px;
+
+    }
+
 .h1{
     color: #f8f8f8;
   
 }
+
+.text{
+    color:red
+}
+
 .color{
     color:white;
     text-align: center;
@@ -79,6 +94,7 @@
 
 .profile{
     position: absolute;
+    left:80px;
     border-radius: 200px;
     width: 110px;
     padding: 20px;
@@ -89,6 +105,21 @@
     font-size:1.5em; 
 }
 
+
+
+
+.profile-contacto{
+    position: absolute;
+    right:40px;
+    border-radius: 200px;
+    width: 180px;
+    padding: 10px;
+    
+}
+
+.card-contacto{
+    margin: auto;
+}
 
 
 ;
