@@ -37,7 +37,7 @@ def estaciones(request):
 
 def busqueda(request):
    q = request.GET.get('q', '')
-   estaciones = Estacion.objects.filter(nombre__icontains=q)
+   estaciones = Estacion.objects.filter(nombre__icontains = q)
    context = {
        "estaciones" : estaciones,
    }

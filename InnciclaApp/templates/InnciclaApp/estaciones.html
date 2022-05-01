@@ -5,11 +5,18 @@
         <h1 class="color">Estaciones</h1>
         <br />
         <br />
-        <form action="url/buscador/" method="GET">
+        <form action="{% url 'busqueda' %}" method="GET">
             {% csrf_token %}
-            
+            <div class="row">
+                <div class="col col-lg-10">
+                    <input name="q" class="form-control me-2" type="search" placeholder="Ingresa la estacion que buscas" aria-label="Search">
+                </div>
+                <div class="col col-lg-1">
+                    <button class="btn btn-success" type="submit">Buscar</button>
+                </div>
+            </div>
         </form>
-
+        <br />
         {% for estacion in estaciones %}
         <div class="row">
             <div class="container-fluid">
@@ -37,4 +44,7 @@
         <br />
         <br />
         {% endfor %}
+        <a href="{% url 'inicio' %}" class="btn btn-success">Inicio</a>
+    <br />
+    <br />
 {% endblock %}
