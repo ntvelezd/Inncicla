@@ -1,0 +1,15 @@
+{% extends 'InnciclaApp/base.html' %}
+{% load static %}
+{% block content %}
+    <div hidden id="kml">https://www.dropbox.com/s/ztm6jlskggivkc1/Encicla.kml?dl=1</div>
+    <div class="card">
+        <div class="card-body">
+            <div id="map"></div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'js/function_initMap.js' %}"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJY42p9cbR3090bRqOHOgPupVz22RywGY&callback=initMap">
+    </script>
+{% endblock %}
