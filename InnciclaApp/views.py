@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.views.generic.edit import CreateView
+from InnciclaApp.models import Estacion
 from InnciclaApp.forms import SignUpForm
 
 # Create your views here.
@@ -27,4 +28,17 @@ def signup(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 def estaciones(request):
-    return render(request,"InnciclaApp/estaciones.html")
+    estaciones = Estacion.objects.all()
+    context = {
+        "estaciones" : estaciones,
+    }
+    
+    return render(request,"InnciclaApp/estaciones.html", context)
+
+def busqueda(request):
+   q = request.GET.get('q', '')
+   estaciones = Estacion.objects.filter(nombre__icontains=q)
+   context = {
+       "estaciones" : estaciones,
+   }
+   return render(request, 'InnciclaApp/estaciones.html', context)

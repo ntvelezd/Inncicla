@@ -5,9 +5,9 @@ __pycache__
 
 # Env
 .env
-myvenv/
-venv/
-
+../myvenv/
+../venv/
+../requirements.txt
 # Database
 db.sqlite3
 
