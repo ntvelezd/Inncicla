@@ -36,3 +36,29 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'birth_date', 'password1', 'password2', )
+
+class AgregarContactoForm(forms.Form):
+ 
+    nombre = forms.CharField(label='Nombre', max_length=30, required=True, help_text='Tu Nombre completo.')
+    apellido = forms.CharField(label='Apellido', max_length=30, required=True, help_text='Tu Apellido completo.')
+    parentesco=(
+        ("1", "Mamá"),
+        ("2", "Papá"),
+        ("3", "Hermano/a"),
+        ("4", "Familiar"),
+        ("5", "Amigo"),
+        ("6", "Conocido"),
+    )
+    parentesco = forms.ChoiceField(label='Parentesco', choices=parentesco, required=True)
+    telefono = forms.CharField(
+                     help_text = "Celular"
+                     )
+    correo = forms.EmailField(label='Correo', max_length=254, help_text='Tu correo electrónico', required=True)
+    Id_types=(
+        ("1", "Tarjeta de Identidad"),
+        ("2","Cédula de Ciudadanía"),
+    )
+    Id_type = forms.ChoiceField(label='Tipo de documento', choices=Id_types, required=True)
+    Id_number = forms.CharField(label='Número de documento',  max_length=30, required=True)
+
+    

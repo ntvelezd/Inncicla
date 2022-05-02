@@ -3,8 +3,9 @@
 {% block content %}
     <div class="container">
         <h1 class="color">Contactos</h1>
-        <br />
-        <br />
+        <div class="llamada" id="agregar-contactos" >
+            <a href="{% url 'contacto-agregar' %}" >Agregar contacto</a>
+        </div>
         <div class="row">
             <div class = " container">
                 <div class="card bg-warning mb-3 card-contacto" style="max-width: 540px;">
@@ -19,8 +20,7 @@
                                 <p class="card-text">
                                     Contacto: 3138326462
                                 </p>
-                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Robledo/@6.2731701,-75.5943878,17z/data=!3m1!4b1!4m5!3m4!1s0x8e44293dd16719ab:0x2e9d5610883144e6!8m2!3d6.2731648!4d-75.5921938"
-                                   class="btn btn-primary">Ver contacto</a>
+                                <a href="{% url 'contacto-info' %}" class="btn btn-primary">Ver contacto</a>
                             </div>
                         </div>
                     </div>
@@ -36,15 +36,14 @@
                         <div class="col-sm-8">
                             <img class="profile-contacto" src="{% static 'css/images/profile3.png' %}">
                             <div class="card-body">
-                                <h5 class="card-title">Sergio Maldonado Fisher</h5>
+                                <h5 class="card-title">Adriana Esguerra Espinosa</h5>
                                 <p class="card-text">
-                                    Parentesco: Papá
+                                    Parentesco: Mamá
                                 </p>
                                 <p class="card-text">
-                                    Contacto: 3138326462
+                                    Contacto: 3105611845
                                 </p>
-                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Robledo/@6.2731701,-75.5943878,17z/data=!3m1!4b1!4m5!3m4!1s0x8e44293dd16719ab:0x2e9d5610883144e6!8m2!3d6.2731648!4d-75.5921938"
-                                   class="btn btn-primary">Ver contacto</a>
+                                <a class="btn btn-primary">Ver contacto</a>
                             </div>
                         </div>
                     </div>
@@ -60,15 +59,14 @@
                         <div class="col-sm-8">
                             <img class="profile-contacto" src="{% static 'css/images/profile3.png' %}">
                             <div class="card-body">
-                                <h5 class="card-title">Sergio Maldonado Fisher</h5>
+                                <h5 class="card-title">Mónica Torres Zabala</h5>
                                 <p class="card-text">
-                                    Parentesco: Papá
+                                    Parentesco: Familiar
                                 </p>
                                 <p class="card-text">
-                                    Contacto: 3138326462
+                                    Contacto: 3105783749
                                 </p>
-                                <a href="https://www.google.com.co/maps/place/EnCicla+-+Robledo/@6.2731701,-75.5943878,17z/data=!3m1!4b1!4m5!3m4!1s0x8e44293dd16719ab:0x2e9d5610883144e6!8m2!3d6.2731648!4d-75.5921938"
-                                   class="btn btn-primary">Ver contacto</a>
+                                <a class="btn btn-primary">Ver contacto</a>
                             </div>
                         </div>
                     </div>
