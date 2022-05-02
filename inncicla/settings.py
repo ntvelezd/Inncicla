@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # users will be redirected to the home page after login
-LOGIN_REDIRECT_URL = 'estaciones'
+LOGIN_REDIRECT_URL = 'inicio'
 LOGOUT_REDIRECT_URL = 'home'
 
 # Internationalization
