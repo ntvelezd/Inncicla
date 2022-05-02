@@ -8,6 +8,17 @@
 
     }
 
+a:link { text-decoration: none; color:white; }
+
+
+a:visited { text-decoration: none; color:white;}
+    
+    
+a:hover { text-decoration: none; color:white;}
+    
+    
+a:active { text-decoration: none; color:white;}
+
 .h1{
     color: #f8f8f8;
   
@@ -67,6 +78,8 @@
     margin-bottom: 50px;;
 }
 
+
+
 #casa{
     background-color: orange;
     border: orange;
@@ -121,5 +134,30 @@
     margin: auto;
 }
 
+#agregar-contactos{
+    border-color: green;
+    background-color: green;
+    
+}
 
+.editar-eliminar{
+    border: 1px solid ;
+    padding: 30px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: white;
+    border-radius: 40px;
+    margin-bottom: 50px;;
+}
+
+#editar{
+    border-color: plum;
+    background-color: plum;
+}
+
+#eliminar{
+    border-color: red;
+    background-color: red;
+}
 ;

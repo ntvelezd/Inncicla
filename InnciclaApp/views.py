@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.views.generic.edit import CreateView
 from InnciclaApp.forms import SignUpForm
+from .forms import AgregarContactoForm
 
 # Create your views here.
 def inicio(request):
@@ -31,6 +32,14 @@ def estaciones(request):
 
 def contactos(request):
     return render(request,"InnciclaApp/Contactos/contactos.html")
+
+def contactoInfo(request):
+    return render(request,"InnciclaApp/Contactos/contacto-info.html")
+
+def contactoAgregar(request):
+    context ={}
+    context['form']= AgregarContactoForm()
+    return render(request, "InnciclaApp/Contactos/contacto-agregar.html", context)
     
 def mapa(request):
     return render(request,"InnciclaApp/mapa.html")
