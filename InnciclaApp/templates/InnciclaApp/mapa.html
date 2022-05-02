@@ -7,7 +7,11 @@
             <div id="map"></div>
         </div>
     </div>
-{% endblock %}
+    <br/> <br/> <br/>
+    <div class="llamada" id="agregar-contactos" >
+        <a href="{% url 'inicio' %}" >Inicio</a>
+    </div>
+    {% endblock %}
 {% block script %}
     <script src="{% static 'js/function_initMap.js' %}"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJY42p9cbR3090bRqOHOgPupVz22RywGY&callback=initMap">
