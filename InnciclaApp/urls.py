@@ -10,6 +10,7 @@ urlpatterns = [
     path('contactos/', views.contactos, name="contactos"),
     path('contacto-info/', views.contactoInfo, name="contacto-info"),
     path('contacto-agregar/', views.contactoAgregar, name="contacto-agregar"),
+    path('crear-usuario/', views.crearUsuario, name="crear-usuario"),
     path('mapa/', views.mapa, name="mapa"),
     path('busqueda/', views.busqueda, name="busqueda"),
 ]

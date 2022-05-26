@@ -58,3 +58,6 @@ def contactoAgregar(request):
 def mapa(request):
     return render(request,"InnciclaApp/mapa.html")
 
+def crearUsuario(request):
+    return render(request,"InnciclaApp/Admin/crear_usuario.html")
+
