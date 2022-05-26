@@ -1,0 +1,133 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}">
+{% block content %}
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <body class="background">
+        <div class="container-sm mycont">
+            <h1 class="color">Ver usuarios</h1>
+            <br />
+            <br />
+            {% for usuario in usuarios %}
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ usuario.nombre }}</h2>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="text-muted">E-mail</h6>
+                                <p class="card-text">
+                                    {{ usuario.email }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-muted">Nacimiento</h6>
+                                <p class="card-text">
+                                    {{ usuario.birth_date }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-muted">Tipo de sangre</h6>
+                                <p class="card-text">
+                                    {{ usuario.blood_type }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-muted">Tipo de identificación</h6>
+                                <p class="card-text">
+                                    {{ usuario.Id_type }}
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="text-muted">Numero identificación</h6>
+                                <p class="card-text">
+                                    {{ usuario.Id_number }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-muted">Es información privada</h6>
+                                <p class="card-text">
+                                    {{ usuario.private_info }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-muted">Discapacidad</h6>
+                                <p class="card-text">
+                                    {{ usuario.disability }}
+                                </p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-muted">Info adicional</h6>
+                                <p class="card-text">
+                                    {{ usuario.about }}
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false"
+                                                aria-controls="flush-collapseOne">
+                                            Contactos de emergencia
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne"
+                                         class="accordion-collapse collapse"
+                                         aria-labelledby="flush-headingOne"
+                                         data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            {% for contacto in contactos %}
+                                                {% if contacto.id_c == usuario.id_contacto %}
+                                                    <div class="row">
+                                                        <h5 class="text-muted">{{ contacto.parentesco }}</h5>
+                                                        <h4 class="card-title">{{ contacto.nombre }} {{ contacto.apellido }}</h4>
+                                                        <br />
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6 class="text-muted">Teléfono</h6>
+                                                            <p class="card-text">
+                                                                {{ contacto.telefono }}
+                                                            </p>
+                                                        </div>
+                                                        <div class="col">
+                                                          <h6 class="text-muted">E-mail</h6>
+                                                          <p class="card-text">
+                                                              {{ contacto.correo }}
+                                                          </p>
+                                                      </div>
+                                                      <div class="col">
+                                                        <h6 class="text-muted">{{ contacto.tipoDocumento }}</h6>
+                                                        <p class="card-text">
+                                                            {{ contacto.numeroDoc }}
+                                                        </p>
+                                                    </div>
+                                                    </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            {% endfor %}
+        </div>
+    </body>
+{% endblock %}
