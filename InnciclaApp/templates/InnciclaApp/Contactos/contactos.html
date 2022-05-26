@@ -6,6 +6,7 @@
         <div class="llamada" id="agregar-contactos" >
             <a href="{% url 'contacto-agregar' %}" >Agregar contacto</a>
         </div>
+        {% for contacto in contactos %}
         <div class="row">
             <div class = " container">
                 <div class="card bg-warning mb-3 card-contacto" style="max-width: 540px;">
@@ -13,12 +14,12 @@
                         <div class="col-sm-8">
                             <img class="profile-contacto" src="{% static 'css/images/profile3.png' %}">
                             <div class="card-body">
-                                <h5 class="card-title">Sergio Maldonado Fisher</h5>
+                                <h5 class="card-title">{{ contacto.nombre }} {{ contacto.apellido }}</h5>
                                 <p class="card-text">
-                                    Parentesco: Papá
+                                    Parentesco: {{ contacto.parentesco }}
                                 </p>
                                 <p class="card-text">
-                                    Contacto: 3138326462
+                                    Contacto: {{ contacto.telefono }}
                                 </p>
                                 <a href="{% url 'contacto-info' %}" class="btn btn-primary">Ver contacto</a>
                             </div>
@@ -29,52 +30,5 @@
         </div>
         <br />
         <br />
-        <div class="row">
-            <div class = "container">
-                <div class="card bg-warning mb-3 card-contacto" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-sm-8">
-                            <img class="profile-contacto" src="{% static 'css/images/profile3.png' %}">
-                            <div class="card-body">
-                                <h5 class="card-title">Adriana Esguerra Espinosa</h5>
-                                <p class="card-text">
-                                    Parentesco: Mamá
-                                </p>
-                                <p class="card-text">
-                                    Contacto: 3105611845
-                                </p>
-                                <a class="btn btn-primary">Ver contacto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br />
-        <br />
-        <div class="row">
-            <div class = "container">
-                <div class="card bg-warning mb-3 card-contacto" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-sm-8">
-                            <img class="profile-contacto" src="{% static 'css/images/profile3.png' %}">
-                            <div class="card-body">
-                                <h5 class="card-title">Mónica Torres Zabala</h5>
-                                <p class="card-text">
-                                    Parentesco: Familiar
-                                </p>
-                                <p class="card-text">
-                                    Contacto: 3105783749
-                                </p>
-                                <a class="btn btn-primary">Ver contacto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="{% url 'inicio' %}" class="btn btn-success">Inicio</a>
-            </div>
-        </div>
-    </div>
-    <br />
-    <br />
+        {% endfor %}
 {% endblock %}
