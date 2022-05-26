@@ -15,4 +15,5 @@ urlpatterns = [
     path('menu-admin/', views.menuAdmin, name="menu-admin"),
     path('mapa/', views.mapa, name="mapa"),
     path('busqueda/', views.busqueda, name="busqueda"),
+    path('editar/', views.editar, name="editar"),
 ]

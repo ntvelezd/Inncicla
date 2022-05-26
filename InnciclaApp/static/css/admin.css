@@ -13,6 +13,10 @@
     padding: 30px;
   }
 
+.back{
+  background-color: rgb(102, 103, 211);
+}
+
 
 
 @media (max-width: 500px) {

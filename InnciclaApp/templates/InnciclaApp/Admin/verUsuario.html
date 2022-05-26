@@ -8,17 +8,17 @@
           crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <body class="background">
+    <body style="background-color: rgb(102, 103, 211);" class="background">
         <div class="container-sm mycont">
-            <h1 class="color">Ver usuarios</h1>
+            <h1 style="color: white; text-align: center;">Ver usuarios</h1>
             <br />
             <br />
             {% for usuario in usuarios %}
-                <div class="card">
+                <div  class="card">
                     <div class="card-body">
                         <h2 class="card-title">{{ usuario.nombre }}</h2>
                         <br />
-                        <div class="row">
+                        <div  class="row">
                             <div class="col">
                                 <h6 class="text-muted">E-mail</h6>
                                 <p class="card-text">
@@ -123,6 +123,14 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                          <button type="button" class="btn btn-warning">
+                            <a href="{% url 'editar' %}">
+                                Editar Usuario
+                            </button>
+                        </a>
                         </div>
                     </div>
                 </div>
