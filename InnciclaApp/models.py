@@ -11,6 +11,7 @@ class Estacion(models.Model):
 
 class Contacto(models.Model):
     id = models.BigAutoField(primary_key=True)
+    id_c = models.CharField(max_length=30, default = '1')
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
     parentesco = models.CharField(max_length=30)

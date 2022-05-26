@@ -5,7 +5,7 @@ from django.contrib.auth import login, authenticate
 from django.views.generic.edit import CreateView
 from django.shortcuts import redirect
 from django.utils import timezone
-from InnciclaApp.models import Estacion, Contacto
+from InnciclaApp.models import Estacion, Contacto, Usuario
 from InnciclaApp.forms import SignUpForm
 from .forms import AgregarContactoForm
 
@@ -15,6 +15,9 @@ def inicio(request):
 
 def home(request):
     return render(request,"InnciclaApp/home.html")
+
+def menuAdmin(request):
+    return render(request,"InnciclaApp/Admin/menu.html")
 
 def signup(request):
     if request.method == 'POST':
@@ -37,6 +40,16 @@ def estaciones(request):
     }
     
     return render(request,"InnciclaApp/estaciones.html", context)
+
+def verUsuario(request):
+    usuarios = Usuario.objects.all()
+    contactos = Contacto.objects.all()
+    context = {
+        "usuarios" : usuarios,
+        "contactos" : contactos
+    }
+    
+    return render(request,"InnciclaApp/Admin/verUsuario.html", context)
 
 def busqueda(request):
    q = request.GET.get('q', '')

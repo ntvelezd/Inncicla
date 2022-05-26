@@ -1,0 +1,54 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}">
+{% block content %}
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <body class="background">
+        <div class="container-sm mycont">
+            <h1 class="color">Menu admin</h1>
+            <br />
+            <div class="row ">
+                <div class="col">
+                    <img class="container-sm img"
+                         src="{% static 'css/images/mountain.png' %}"
+                         alt="My image"
+                         height="389px">
+                </div>
+                <br />
+                <br />
+                <div class="row">
+                    <br />
+                    <br />
+                </div>
+                <div class="row ">
+                    <div class="col"></div>
+                    <button type="button" class="btn btn-warning">
+                        <a href="{% url 'crear-usuario' %}">
+                            Agregar Usuario
+                        </button>
+                    </a>
+                    <div class="col"></div>
+                    <div class="row">
+                        <br />
+                        <br />
+                    </div>
+                    <div class="col"></div>
+                    <button type="button" class="btn btn-warning">
+                        <a href="{% url 'ver-usuario' %}">
+                            Ver Usuarios
+                        </button>
+                    </a>
+                    <br />
+                    <br />
+                    <br />
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}
