@@ -19,6 +19,9 @@ def home(request):
 def menuAdmin(request):
     return render(request,"InnciclaApp/Admin/menu.html")
 
+def editar(request):
+    return render(request,"InnciclaApp/Admin/editar.html")
+
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
