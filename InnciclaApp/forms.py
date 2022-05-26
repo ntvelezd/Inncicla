@@ -2,6 +2,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Contacto
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 
@@ -37,7 +38,7 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'birth_date', 'password1', 'password2', )
 
-class AgregarContactoForm(forms.Form):
+class AgregarContactoForm(forms.ModelForm):
  
     nombre = forms.CharField(label='Nombre', max_length=30, required=True, help_text='Tu Nombre completo.')
     apellido = forms.CharField(label='Apellido', max_length=30, required=True, help_text='Tu Apellido completo.')
@@ -61,4 +62,6 @@ class AgregarContactoForm(forms.Form):
     Id_type = forms.ChoiceField(label='Tipo de documento', choices=Id_types, required=True)
     Id_number = forms.CharField(label='Número de documento',  max_length=30, required=True)
 
-    
+    class Meta:
+        model = Contacto
+        fields = ('id', 'nombre', 'apellido', 'parentesco', 'telefono', 'correo', 'tipoDocumento', 'numeroDoc', )
