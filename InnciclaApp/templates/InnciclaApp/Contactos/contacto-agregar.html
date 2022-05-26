@@ -15,7 +15,7 @@
     <div class="container">
         <div class="card bg-warning" style="width: 35rem;">
             <div class="input-group">
-                <form method="post">
+                <form method="POST">
                     <div class="card-body">
                         {% csrf_token %}
                         <div class="row">{{ form.nombre|as_crispy_field }}</div>
@@ -44,6 +44,7 @@
                             {{ form.Id_number|as_crispy_field }}
                             <br />
                         </div>
+                            <button type="submit" class="btn btn-success">Crear</button>
                         <br />
                         <br />
                     </div>
