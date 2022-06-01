@@ -10,16 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Preahvihear&display=swap"
       rel="stylesheet">
 {% load static %}
-<link rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/primerTemplate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/inicio.css' %}">
 <!DOCTYPE html>
 <html>
     <body style="background-color:#1084f1;">
         <a href="{% url 'logout' %}">
-        <img style="float: right; "
-             class="profile"
-             src="{% static 'css/images/profile3.png' %}">
+            <img style="float: right; "
+                 class="profile"
+                 src="{% static 'css/images/profile3.png' %}">
         </a>
         <h1 class="color">Inicio</h1>
         <div class="container">
@@ -35,10 +33,12 @@
                     </div>
                 </a>
             </div>
+            <a href="{% url 'contactos' %}">
             <div class="box2" id="contacto">
                 <i class="icon bi bi-person-rolodex"></i>
                 CONTACTO DE EMERGENCIA
             </div>
+            <a href="{% url 'mapa' %}">
             <div class="box2" id="mapa">
                 <i class="icon bi bi-geo-alt"></i>
                 MAPA DE ESTACIONES
@@ -47,6 +47,5 @@
                 <i class="icon bi bi-telephone"></i>
                 LLAMADA DE EMERGENCIA
             </div>
-        </div>
-    </body>
-</html>
+        </body>
+    </html>

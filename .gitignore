@@ -5,9 +5,9 @@ __pycache__
 
 # Env
 .env
-myvenv/
-venv/
-
+../myvenv/
+../venv/
+../requirements.txt
 # Database
 db.sqlite3
 
@@ -19,7 +19,7 @@ db.sqlite3
 .DS_Store
 .fseventsd
 .Spotlight-V100
-/node_modules
+
 
 # Windows
 Thumbs.db*

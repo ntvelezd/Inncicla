@@ -1,0 +1,48 @@
+{% extends 'InnciclaApp/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h1 class="color">Contacto</h1>
+        <div class="row">
+            <div class = "container">
+                <div class="row">
+                    <div class="col editar-eliminar" id="editar">
+                        <a href="{% url 'contacto-agregar' %}" >Editar contacto</a>
+                    </div>
+                    <div class="col editar-eliminar" id="eliminar">
+                      Eliminar contacto
+                    </div>
+                  </div>
+                <div class="card bg-warning mb-3 card-contacto" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-sm-8">
+                            <img class="profile-contacto" src="{% static 'css/images/profile3.png' %}">
+                            <div class="card-body">
+                                <h5 class="card-title">Sergio Maldonado Fisher</h5>
+                                <p class="card-text">
+                                    Parentesco: Papá
+                                </p>
+                                <p class="card-text">
+                                    Contacto: 3138326462
+                                </p>
+                                <p class="card-text">
+                                    Correo: slm@gmail.com
+                                </p>
+                                <p class="card-text">
+                                    Tipo de documento: Cédula de ciudadania
+                                </p>
+                                <p class="card-text">
+                                    Número de documento: 51912165
+                                </p>
+                                <a href="{% url 'contactos' %}" class="btn btn-success">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="{% url 'inicio' %}" class="btn btn-success">Inicio</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+{% endblock %}

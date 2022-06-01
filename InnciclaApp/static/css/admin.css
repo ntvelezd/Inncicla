@@ -1,0 +1,26 @@
+.color{
+    
+    text-align: center;
+    color: rgb(102, 103, 211);
+}
+
+.background{
+    /* background-color:rgb(185, 200, 248); */
+}
+
+.mycont{
+    margin-top: 50px;
+    padding: 30px;
+  }
+
+
+
+@media (max-width: 500px) {
+    .contrasena {
+      padding-top: 25px;
+    }
+
+    .img{
+        padding-top: 120px;
+    }
+  }

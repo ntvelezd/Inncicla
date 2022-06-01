@@ -1,7 +1,33 @@
+#map {
+    height: 700px;
+    width: 95%;
+    overflow: hidden;
+    border: thin solid #333;
+    padding: 20px;
+    margin: 20px;
+
+    }
+
+a:link { text-decoration: none; color:white; }
+
+
+a:visited { text-decoration: none; color:white;}
+    
+    
+a:hover { text-decoration: none; color:white;}
+    
+    
+a:active { text-decoration: none; color:white;}
+
 .h1{
     color: #f8f8f8;
   
 }
+
+.text{
+    color:red
+}
+
 .color{
     color:white;
     text-align: center;
@@ -52,6 +78,8 @@
     margin-bottom: 50px;;
 }
 
+
+
 #casa{
     background-color: orange;
     border: orange;
@@ -79,6 +107,7 @@
 
 .profile{
     position: absolute;
+    left:80px;
     border-radius: 200px;
     width: 110px;
     padding: 20px;
@@ -91,4 +120,44 @@
 
 
 
+
+.profile-contacto{
+    position: absolute;
+    right:40px;
+    border-radius: 200px;
+    width: 180px;
+    padding: 10px;
+    
+}
+
+.card-contacto{
+    margin: auto;
+}
+
+#agregar-contactos{
+    border-color: green;
+    background-color: green;
+    
+}
+
+.editar-eliminar{
+    border: 1px solid ;
+    padding: 30px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: white;
+    border-radius: 40px;
+    margin-bottom: 50px;;
+}
+
+#editar{
+    border-color: plum;
+    background-color: plum;
+}
+
+#eliminar{
+    border-color: red;
+    background-color: red;
+}
 ;
